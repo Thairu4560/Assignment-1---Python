@@ -1,0 +1,18 @@
+## Compiled vs. Interpreted Languages (Question d)
+
+### Compiled Languages:
+- Source code is converted to machine code **before execution** (compilation step)
+- Generally **faster execution** since the code is already translated
+- Examples: C, C++, Rust
+
+### Interpreted Languages:
+- Code is executed **line by line at runtime** by an interpreter
+- More **portable** (same code runs anywhere with the interpreter)
+- Generally slower than compiled languages
+- Examples: Python, JavaScript, Ruby
+
+### Python's Classification:
+Python is **primarily interpreted**, but it uses **bytecode compilation** internally:
+1. Python code → compiled to bytecode (`.pyc` files)
+2. Bytecode → executed by the Python Virtual Machine (PVM)
+This hybrid approach gives Python benefits of both interpreted and compiled languages.
