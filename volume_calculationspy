@@ -1,0 +1,28 @@
+"""
+Calculates volume under surface z = x² + y² over 0 ≤ x,y ≤ 1
+Uses scipy's double integration function
+"""
+
+import numpy as np
+from scipy.integrate import dblquad
+
+def integrand(y, x):
+    """Function to integrate: z = x² + y²"""
+    return x**2 + y**2
+
+def calculate_volume():
+    """Calculates and prints the volume under the surface"""
+    # Perform double integration
+    volume, error = dblquad(integrand, 
+                          0, 1,  # x limits
+                          lambda x: 0,  # y lower limit
+                          lambda x: 1)  # y upper limit
+    
+    # Print results
+    print(f"Volume under the surface z = x² + y²:")
+    print(f"Over region 0 ≤ x ≤ 1, 0 ≤ y ≤ 1")
+    print(f"Calculated volume: {volume:.6f}")
+    print(f"Estimation error: {error:.2e}")
+
+if __name__ == "__main__":
+  calculate_volume()
